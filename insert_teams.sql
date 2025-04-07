@@ -3,57 +3,57 @@ USE nfl_stats;
 -- Insert Teams by Division
 
 -- AFC East
-INSERT INTO teams (team_name, city, division, conference) VALUES
-('Bills', 'Buffalo', 'East', 'AFC'),
-('Dolphins', 'Miami', 'East', 'AFC'),
-('Patriots', 'New England', 'East', 'AFC'),
-('Jets', 'New York', 'East', 'AFC');
+INSERT INTO teams (team_name, city, conference, division) VALUES
+('Bills', 'Buffalo', 'AFC', 'East'),
+('Dolphins', 'Miami', 'AFC', 'East'),
+('Patriots', 'New England', 'AFC', 'East'),
+('Jets', 'New York', 'AFC', 'East');
 
 -- AFC North
-INSERT INTO teams (team_name, city, division, conference) VALUES
-('Ravens', 'Baltimore', 'North', 'AFC'),
-('Bengals', 'Cincinnati', 'North', 'AFC'),
-('Browns', 'Cleveland', 'North', 'AFC'),
-('Steelers', 'Pittsburgh', 'North', 'AFC');
+INSERT INTO teams (team_name, city, conference, division) VALUES
+('Ravens', 'Baltimore', 'AFC', 'North'),
+('Bengals', 'Cincinnati', 'AFC', 'North'),
+('Browns', 'Cleveland', 'AFC', 'North'),
+('Steelers', 'Pittsburgh', 'AFC', 'North');
 
 -- AFC South
-INSERT INTO teams (team_name, city, division, conference) VALUES
-('Texans', 'Houston', 'South', 'AFC'),
-('Colts', 'Indianapolis', 'South', 'AFC'),
-('Jaguars', 'Jacksonville', 'South', 'AFC'),
-('Titans', 'Tennessee', 'South', 'AFC');
+INSERT INTO teams (team_name, city, conference, division) VALUES
+('Texans', 'Houston', 'AFC', 'South'),
+('Colts', 'Indianapolis', 'AFC', 'South'),
+('Jaguars', 'Jacksonville', 'AFC', 'South'),
+('Titans', 'Tennessee', 'AFC', 'South');
 
 -- AFC West
-INSERT INTO teams (team_name, city, division, conference) VALUES
-('Broncos', 'Denver', 'West', 'AFC'),
-('Chiefs', 'Kansas City', 'West', 'AFC'),
-('Raiders', 'Las Vegas', 'West', 'AFC'),
-('Chargers', 'Los Angeles', 'West', 'AFC');
+INSERT INTO teams (team_name, city, conference, division) VALUES
+('Broncos', 'Denver', 'AFC', 'West'),
+('Chiefs', 'Kansas City', 'AFC', 'West'),
+('Raiders', 'Las Vegas', 'AFC', 'West'),
+('Chargers', 'Los Angeles', 'AFC', 'West');
 
 -- NFC East
-INSERT INTO teams (team_name, city, division, conference) VALUES
-('Cowboys', 'Dallas', 'East', 'NFC'),
-('Giants', 'New York', 'East', 'NFC'),
-('Eagles', 'Philadelphia', 'East', 'NFC'),
-('Commanders', 'Washington', 'East', 'NFC');
+INSERT INTO teams (team_name, city, conference, division) VALUES
+('Cowboys', 'Dallas', 'NFC', 'East'),
+('Giants', 'New York', 'NFC', 'East'),
+('Eagles', 'Philadelphia', 'NFC', 'East'),
+('Commanders', 'Washington', 'NFC', 'East');
 
 -- NFC North
-INSERT INTO teams (team_name, city, division, conference) VALUES
-('Bears', 'Chicago', 'North', 'NFC'),
-('Lions', 'Detroit', 'North', 'NFC'),
-('Packers', 'Green Bay', 'North', 'NFC'),
-('Vikings', 'Minnesota', 'North', 'NFC');
+INSERT INTO teams (team_name, city, conference, division) VALUES
+('Bears', 'Chicago', 'NFC', 'North'),
+('Lions', 'Detroit', 'NFC', 'North'),
+('Packers', 'Green Bay', 'NFC', 'North'),
+('Vikings', 'Minnesota', 'NFC', 'North');
 
 -- NFC South
-INSERT INTO teams (team_name, city, division, conference) VALUES
-('Falcons', 'Atlanta', 'South', 'NFC'),
-('Panthers', 'Carolina', 'South', 'NFC'),
-('Saints', 'New Orleans', 'South', 'NFC'),
-('Buccaneers', 'Tampa Bay', 'South', 'NFC');
+INSERT INTO teams (team_name, city, conference, division) VALUES
+('Falcons', 'Atlanta', 'NFC', 'South'),
+('Panthers', 'Carolina', 'NFC', 'South'),
+('Saints', 'New Orleans', 'NFC', 'South'),
+('Buccaneers', 'Tampa Bay', 'NFC', 'South');
 
 -- NFC West
-INSERT INTO teams (team_name, city, division, conference) VALUES
-('Cardinals', 'Arizona', 'West', 'NFC'),
-('Rams', 'Los Angeles', 'West', 'NFC'),
-('49ers', 'San Francisco', 'West', 'NFC'),
-('Seahawks', 'Seattle', 'West', 'NFC');
+INSERT INTO teams (team_name, city, conference, division) VALUES
+('Cardinals', 'Arizona', 'NFC', 'West'),
+('Rams', 'Los Angeles', 'NFC', 'West'),
+('49ers', 'San Francisco', 'NFC', 'West'),
+('Seahawks', 'Seattle', 'NFC', 'West');
