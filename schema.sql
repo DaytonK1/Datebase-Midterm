@@ -14,52 +14,37 @@ CREATE TABLE teams (
 
 -- Positions Table
 CREATE TABLE positions (
-    position_id INT PRIMARY KEY AUTO_INCREMENT,
+    position_id VARCHAR(5) PRIMARY KEY,
     position_name VARCHAR(20) NOT NULL,
-    position_abbreviation VARCHAR(5) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Players Table
 CREATE TABLE players (
-    player_id INT PRIMARY KEY AUTO_INCREMENT,
-    first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
-    position_id INT NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    position_id VARCHAR(5) NOT NULL,
     jersey_number INT,
     team_id INT,
-    birth_date DATE,
-    height VARCHAR(10),
-    weight INT,
-    college VARCHAR(100),
-    draft_year INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (last_name, first_name),
     FOREIGN KEY (team_id) REFERENCES teams(team_id),
     FOREIGN KEY (position_id) REFERENCES positions(position_id)
 );
 
--- Games Table (2024 Season)
-CREATE TABLE games (
-    game_id INT PRIMARY KEY AUTO_INCREMENT,
-    home_team_id INT,
-    away_team_id INT,
-    game_date DATE NOT NULL,
-    game_type ENUM('Regular', 'Postseason') NOT NULL,
-    home_score INT,
-    away_score INT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (home_team_id) REFERENCES teams(team_id),
-    FOREIGN KEY (away_team_id) REFERENCES teams(team_id)
-);
-
--- Player Stats Table
-CREATE TABLE player_stats (
+-- Season Stats Table
+CREATE TABLE season_stats (
     stat_id INT PRIMARY KEY AUTO_INCREMENT,
-    player_id INT,
-    game_id INT,
+    last_name VARCHAR(50) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    season_year INT NOT NULL,
+    completions INT DEFAULT 0,
+    attempts INT DEFAULT 0,
+    completion_percentage DECIMAL(4,1) DEFAULT 0.0,
     passing_yards INT DEFAULT 0,
     passing_touchdowns INT DEFAULT 0,
     interceptions INT DEFAULT 0,
+    passer_rating DECIMAL(4,1) DEFAULT 0.0,
     rushing_yards INT DEFAULT 0,
     rushing_touchdowns INT DEFAULT 0,
     receptions INT DEFAULT 0,
@@ -68,6 +53,5 @@ CREATE TABLE player_stats (
     tackles INT DEFAULT 0,
     sacks DECIMAL(3,1) DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (player_id) REFERENCES players(player_id),
-    FOREIGN KEY (game_id) REFERENCES games(game_id)
+    FOREIGN KEY (last_name, first_name) REFERENCES players(last_name, first_name)
 );

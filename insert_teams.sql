@@ -1,6 +1,7 @@
 USE nfl_stats;
 
--- Insert AFC Teams
+-- Insert Teams by Division
+
 -- AFC East
 INSERT INTO teams (team_name, city, division, conference) VALUES
 ('Bills', 'Buffalo', 'East', 'AFC'),
@@ -29,7 +30,6 @@ INSERT INTO teams (team_name, city, division, conference) VALUES
 ('Raiders', 'Las Vegas', 'West', 'AFC'),
 ('Chargers', 'Los Angeles', 'West', 'AFC');
 
--- Insert NFC Teams
 -- NFC East
 INSERT INTO teams (team_name, city, division, conference) VALUES
 ('Cowboys', 'Dallas', 'East', 'NFC'),
