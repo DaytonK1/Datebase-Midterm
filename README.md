@@ -6,9 +6,9 @@ A database system built with MariaDB to store and manage NFL player statistics f
 
 The database includes the following main tables:
 - Players (personal info, team affiliation)
-- Teams (team details)
-- Games (2024 regular and postseason games)
-- Player Stats (game-by-game performance)
+- Teams (team details) 
+- Positions (player positions)
+- Player Stats (regular season total)
 
 ## Setup Instructions
 

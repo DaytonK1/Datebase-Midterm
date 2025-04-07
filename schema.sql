@@ -34,10 +34,10 @@ CREATE TABLE players (
 
 -- Season Stats Table
 CREATE TABLE season_stats (
-    stat_id INT PRIMARY KEY AUTO_INCREMENT,
     last_name VARCHAR(50) NOT NULL,
     first_name VARCHAR(50) NOT NULL,
     season_year INT NOT NULL,
+    PRIMARY KEY (last_name, first_name, season_year),
     completions INT DEFAULT 0,
     attempts INT DEFAULT 0,
     completion_percentage DECIMAL(4,1) DEFAULT 0.0,
