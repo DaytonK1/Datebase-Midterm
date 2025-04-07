@@ -12,12 +12,20 @@ CREATE TABLE teams (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Positions Table
+CREATE TABLE positions (
+    position_id INT PRIMARY KEY AUTO_INCREMENT,
+    position_name VARCHAR(20) NOT NULL,
+    position_abbreviation VARCHAR(5) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Players Table
 CREATE TABLE players (
     player_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
-    position VARCHAR(5) NOT NULL,
+    position_id INT NOT NULL,
     jersey_number INT,
     team_id INT,
     birth_date DATE,
@@ -26,7 +34,8 @@ CREATE TABLE players (
     college VARCHAR(100),
     draft_year INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (team_id) REFERENCES teams(team_id)
+    FOREIGN KEY (team_id) REFERENCES teams(team_id),
+    FOREIGN KEY (position_id) REFERENCES positions(position_id)
 );
 
 -- Games Table (2024 Season)
